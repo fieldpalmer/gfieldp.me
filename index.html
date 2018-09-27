@@ -4,38 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/style.css">
     <title>gfieldp</title>
 </head>
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div id="sidebar-nav"class="col-sm-2">
-                <div id="prof-pic" class="row">
-
+            <div class= "col-sm-3" id="sidebar">
+                <div id="prof-card" class="card mb-1">
+                    <div id="home-bio">
+                        <div class="col">
+                            <h4 class="card-title pt-2" id="my-name">gfieldp.me</h4>
+                            <hr>
+                        </div>
+                    </div>
+                    <nav>
+                        <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="about-tab" data-toggle="tab" href="#about" role="tab" aria-controls="about" aria-selected="true">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="portfolio-tab" data-toggle="tab" href="#portfolio" role="tab" aria-controls="portfolio" aria-selected="false">Portfolio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="shop-tab" data-toggle="tab" href="#shop" role="tab" aria-controls="shop" aria-selected="false">Shop</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content clearfix p-3" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="nav-about-tab">
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-small btn-primary">Go Bio</a>
+                            </div>
+                            <div class="tab-pane fade" id="portfolio" role="tabpanel" aria-labelledby="nav-portfolio-tab">
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-small btn-primary">Go Portfolio</a>
+                            </div>
+                            <div class="tab-pane fade" id="shop" role="tabpanel" aria-labelledby="nav-shop-tab">
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-small btn-primary">Go Shopping</a>
+                            </div>
+                        </div>    
+                    </nav>
                 </div>
-                <div id="nav-links" class="row">
-
-                </div>
-                <div id="playlist" class="row">
-
+                <div class="widgets">
+                    <!-- weather widget -->
+                    <span id="weather-widget">
+                        <a class="weatherwidget-io" href="https://forecast7.com/en/35d82n78d58/27604/?unit=us" data-label_1="RALEIGH" data-label_2="WEATHER" data-font="Noto Sans" data-icons="Climacons Animated" data-mode="Forecast" data-days="3" data-theme="blue-mountains" data-suncolor="#ffb000" >RALEIGH WEATHER</a>
+                        <script>
+                            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+                        </script>                    
+                    </span>
+                    <!-- stock ticker widget -->
+                    <span id="stock-ticker">
+                        <div class="tradingview-widget-container">
+                            <div class="tradingview-widget-container__widget"></div>
+                            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+                                {
+                                    "symbols": [
+                                        {
+                                            "title": "BTC/USD",
+                                            "proName": "BITFINEX:BTCUSD"
+                                        },
+                                        {
+                                            "title": "S&P 500",
+                                            "proName": "INDEX:SPX"
+                                        },
+                                        {
+                                            "title": "Nasdaq 100",
+                                            "proName": "INDEX:IUXX"
+                                        },
+                                        {
+                                            "title": "EUR/USD",
+                                            "proName": "FX_IDC:EURUSD"
+                                        },
+                                        {
+                                            "title": "ETH/USD",
+                                            "proName": "BITFINEX:ETHUSD"
+                                        },
+                                        {
+                                            "description": "Amazon",
+                                            "proName": "NASDAQ:AMZN"
+                                        },
+                                        {
+                                            "description": "Apple",
+                                            "proName": "NASDAQ:AAPL"
+                                        },
+                                        {
+                                            "description": "Microsoft",
+                                            "proName": "NASDAQ:MSFT"
+                                        },
+                                        {
+                                            "description": "Google",
+                                            "proName": "NASDAQ:GOOG"
+                                        },
+                                        {
+                                            "description": "Gold (g)",
+                                            "proName": "FX_IDC:XAUUSDG"
+                                        },
+                                        {
+                                            "description": "Silver (g)",
+                                            "proName": "FX_IDC:XAGUSDG"
+                                        }
+                                    ],
+                                    "locale": "en"
+                                };
+                            </script>
+                        </div>
+                    </span>
+                    <!-- spotify widget -->
+                    <span id="playlist">
+                        <iframe src="https://open.spotify.com/embed/user/129959859/playlist/5a9f0DcCIw46aDzciW2Owj" width="100%" height="330" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>                
+                    </span>
                 </div>
             </div>
-            <div class="col-sm-10">
-                <div class="row">
-                    <div class="jumbotron jumbotron-fluid">
-                        <h1 class="display-4">Hello, world!</h1>
-                        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-                        <hr class="my-2">
-                        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-                    </div>
+            <div class="col-sm-9">
+                <div class="jumbotron jumbotron-fluid px-4">
+                    <h1 class="display-4">Hello, world!</h1>
+                    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                    <hr class="my-2">
+                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
                 </div>
-                <div class="row" id="stock-ticker">
-
-                </div>
-                <div class="row">
+                <div class="container">
                     <div class="card-deck">
                         <div id="blogLinks" class="card">
                             <div class="card-body">
@@ -45,14 +135,12 @@
                                     <li class="list-group-item">Dapibus ac facilisis in</li>
                                     <li class="list-group-item">Vestibulum at eros</li>
                                 </ul>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                             </div>
                         </div>
                         <div id="recentWork" class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Recent Work</h5>
                                 <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                             </div>
                         </div>
                         <div id="newsLinks" class="card">
@@ -63,14 +151,6 @@
                                     <li class="list-group-item">Dapibus ac facilisis in</li>
                                     <li class="list-group-item">Vestibulum at eros</li>
                                 </ul>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                        </div>
-                        <div id="charityDrive" class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Shop for Charity</h5>
-                                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                             </div>
                         </div>
                     </div>
@@ -81,7 +161,7 @@
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="assets/bootstrap-4.0.0-alpha.6-dist/js/bootstrap.js"></script>
     <script src="assets/main.js"></script>
 </body>
 </html>

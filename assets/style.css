@@ -1,0 +1,17 @@
+.container-fluid {
+    overflow: hidden;
+    height: auto;
+}
+
+#sidebar {
+    height: 100vh;
+}
+/* 
+#prof-card {
+    height: 33%;
+} */
+
+.widgets {
+    height: 60%;
+    overflow-y: scroll;
+}

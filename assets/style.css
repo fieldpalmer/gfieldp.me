@@ -1,17 +1,36 @@
-.container-fluid {
-    overflow: hidden;
-    height: auto;
+body{
+    background-image: url('./images/ocean.jpg');
+}
+
+#top-nav {
+    float: right;
+    /* float: right; */
+    padding: 15px;
+}
+
+.body-content {
+    z-index: -5;
+    background-image: url('./images/hanuman-boys-playing-hampi.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
 }
 
 #sidebar {
     height: 100vh;
 }
-/* 
-#prof-card {
-    height: 33%;
-} */
+
 
 .widgets {
     height: 60%;
     overflow-y: scroll;
 }
+
+.jumbotron {
+    background: none;
+}
+
+
+
+
+

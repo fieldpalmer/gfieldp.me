@@ -11,11 +11,12 @@
 <body>
     <div class="container-fluid">
         <div class="row">
+            <!-- sidebar with widgets -->
             <div class= "col-sm-3" id="sidebar">
                 <div id="prof-card" class="card mb-1">
                     <div id="home-bio">
                         <div class="col">
-                            <h4 class="card-title pt-2" id="my-name">gfieldp.me</h4>
+                            <h4 class="card-title pt-2" id="my-name">http://gfieldp.me <br> Field Palmer</h4>
                             <hr>
                         </div>
                     </div>
@@ -25,7 +26,7 @@
                                 <a class="nav-link active" id="about-tab" data-toggle="tab" href="#about" role="tab" aria-controls="about" aria-selected="true">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="portfolio-tab" data-toggle="tab" href="#portfolio" role="tab" aria-controls="portfolio" aria-selected="false">Portfolio</a>
+                                <a class="nav-link" id="skills-tab" data-toggle="tab" href="#skills" role="tab" aria-controls="skills" aria-selected="false">Proficiencies</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="shop-tab" data-toggle="tab" href="#shop" role="tab" aria-controls="shop" aria-selected="false">Shop</a>
@@ -33,16 +34,30 @@
                         </ul>
                         <div class="tab-content clearfix p-3" id="nav-tabContent">
                             <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="nav-about-tab">
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-small btn-primary">Go Bio</a>
+                                <ul>
+                                    <li class="card-text">DOB: 13 July 1992</li>
+                                    <li class="card-text">Location: Raleigh, NC</li>
+                                    <li class="card-text">Occupation: Student</li>
+                                </ul>
+                                <a href="#" class="btn btn-small btn-primary">Learn More</a>
                             </div>
-                            <div class="tab-pane fade" id="portfolio" role="tabpanel" aria-labelledby="nav-portfolio-tab">
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-small btn-primary">Go Portfolio</a>
+                            <div class="tab-pane fade font-sm" id="skills" role="tabpanel" aria-labelledby="nav-skills-tab">
+                                <ul>
+                                    <li class="card-text">HTML</li>
+                                    <li class="card-text">CSS</li>
+                                    <li class="card-text">Bootstrap</li>
+                                    <li class="card-text">Vue.js</li>
+                                    <li class="card-text">JavaScript</li>
+                                    <li class="card-text">jQuery</li>
+                                </ul>
+                                <a href="#" class="btn btn-small btn-primary">See More</a>
                             </div>
                             <div class="tab-pane fade" id="shop" role="tabpanel" aria-labelledby="nav-shop-tab">
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-small btn-primary">Go Shopping</a>
+                                <ul>
+                                    <li class="card-text">Gadgets</li>
+                                    <li class="card-text">Gear</li>
+                                </ul>
+                                <a href="#" class="btn btn-small btn-primary">View Store</a>
                             </div>
                         </div>    
                     </nav>
@@ -56,101 +71,138 @@
                         </script>                    
                     </span>
                     <!-- stock ticker widget -->
-                    <span id="stock-ticker">
-                        <div class="tradingview-widget-container">
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
                             <div class="tradingview-widget-container__widget"></div>
                             <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
-                                {
-                                    "symbols": [
-                                        {
-                                            "title": "BTC/USD",
-                                            "proName": "BITFINEX:BTCUSD"
-                                        },
-                                        {
-                                            "title": "S&P 500",
-                                            "proName": "INDEX:SPX"
-                                        },
-                                        {
-                                            "title": "Nasdaq 100",
-                                            "proName": "INDEX:IUXX"
-                                        },
-                                        {
-                                            "title": "EUR/USD",
-                                            "proName": "FX_IDC:EURUSD"
-                                        },
-                                        {
-                                            "title": "ETH/USD",
-                                            "proName": "BITFINEX:ETHUSD"
-                                        },
-                                        {
-                                            "description": "Amazon",
-                                            "proName": "NASDAQ:AMZN"
-                                        },
-                                        {
-                                            "description": "Apple",
-                                            "proName": "NASDAQ:AAPL"
-                                        },
-                                        {
-                                            "description": "Microsoft",
-                                            "proName": "NASDAQ:MSFT"
-                                        },
-                                        {
-                                            "description": "Google",
-                                            "proName": "NASDAQ:GOOG"
-                                        },
-                                        {
-                                            "description": "Gold (g)",
-                                            "proName": "FX_IDC:XAUUSDG"
-                                        },
-                                        {
-                                            "description": "Silver (g)",
-                                            "proName": "FX_IDC:XAGUSDG"
-                                        }
-                                    ],
-                                    "locale": "en"
-                                };
+                            {
+                            "symbols": [
+                            {
+                                "title": "BTC/USD",
+                                "proName": "BITFINEX:BTCUSD"
+                            },
+                            {
+                                "title": "ETH/USD",
+                                "proName": "BITFINEX:ETHUSD"
+                            },
+                            {
+                                "description": "Gold (g)",
+                                "proName": "FX_IDC:XAUUSDG"
+                            },
+                            {
+                                "description": "Silver (g)",
+                                "proName": "FX_IDC:XAGUSDG"
+                            },
+                            {
+                                "description": "Dow Jones ",
+                                "proName": "DJ:DJI"
+                            },
+                            {
+                                "description": "EUR/USD",
+                                "proName": "FX:EURUSD"
+                            }
+                            ],
+                            "locale": "en"
+                        }
                             </script>
                         </div>
-                    </span>
+                        <!-- TradingView Widget END -->
                     <!-- spotify widget -->
                     <span id="playlist">
-                        <iframe src="https://open.spotify.com/embed/user/129959859/playlist/5a9f0DcCIw46aDzciW2Owj" width="100%" height="330" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>                
+                        <iframe src="https://open.spotify.com/embed/user/129959859/playlist/5a9f0DcCIw46aDzciW2Owj" width="100%" height="400" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>                
                     </span>
                 </div>
             </div>
-            <div class="col-sm-9">
-                <div class="jumbotron jumbotron-fluid px-4">
-                    <h1 class="display-4">Hello, world!</h1>
-                    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-                    <hr class="my-2">
-                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                </div>
-                <div class="container">
-                    <div class="card-deck">
-                        <div id="blogLinks" class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Blog Links</h5>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Cras justo odio</li>
-                                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                                    <li class="list-group-item">Vestibulum at eros</li>
-                                </ul>
+            <!-- main body content -->
+            <div class="col-sm-9 body-content ">
+                <!-- background-image starts here -->
+                <div class="container-fluid">
+                    <!-- home page top nav -->
+                    <nav id="landing-nav">
+                        <ul class="nav" id="top-nav">
+                            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <!-- landing page jumbotron text -->
+                    <div class="jumbotron jumbotron-fluid px-4">
+                        <div class="col-sm-8 col-md-6">
+                            <span id="landing-title">
+                                <h1 class="display-4">Hello, World</h1>
+                                <hr class="my-2">
+                                <p class="lead">Welcome to my homepage.<br> I hope you find what you seek.</p>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- landing page content -->
+                    <div class="container">
+                        <div class="card-deck">
+                            <div class="card">
+                                <h5 class="card-title">Hot Takes</h5>
+                                <div class="card-body">
+                                    <ul class="list-group list-group-flush">
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <h5 class="card-title display-5">Stat of the Day</h5>
+                                <div class="card-body">
+                                    
+                                </div>
+                            </div>
+                            <div class="card">
+                                <h5 class="card-title display-5">Current Events</h5>
+                                <div class="card-body">
+                                    <ul class="list-group list-group-flush">
+
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <div id="recentWork" class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Recent Work</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            </div>
-                        </div>
-                        <div id="newsLinks" class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Current Events</h5>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Cras justo odio</li>
-                                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                                    <li class="list-group-item">Vestibulum at eros</li>
-                                </ul>
+                    </div>
+                    <!-- portfolio content -->
+                    <div class="container">
+                        <div id="portfolio-section" style="display:none">
+                            <h1 class="display-4">Recent Work</h1>
+                            <div class="card-deck mb-5">
+                                <div class="card" style="width: 18rem;">
+                                    <img class="card-img-top" src="..." alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 18rem;">
+                                    <img class="card-img-top" src="..." alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 18rem;">
+                                    <img class="card-img-top" src="..." alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 18rem;">
+                                    <img class="card-img-top" src="..." alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 18rem;">
+                                    <img class="card-img-top" src="..." alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 18rem;">
+                                    <img class="card-img-top" src="..." alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

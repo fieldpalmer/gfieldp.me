@@ -14,7 +14,5 @@ function loadStore() {
     $("#shop-page").load("../templates/shop.html");
 }
 //initialize site
-$(document).ready(loadPortfolio());
-//sidebar visibility action
-$(".about-btn").click(loadAbout());
+$(document).ready(loadAbout());
 //home page content action

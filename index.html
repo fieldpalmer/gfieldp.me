@@ -4,43 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style.css">
     <title>gfieldp</title>
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid" id="landing-page">
         <div class="row">
-            <!-- sidebar with widgets -->
-            <div class= "col-sm-3" id="sidebar">
-                <div class="card" id="prof-card">
-                    <div class="box">
-                        <div class="img">
-                            <img src="assets/images/field-france-mont-st-michel.jpg">
+            <div class="col-sm-3 p-0" id="sidebar">
+                <div class="card sticky-top" id="sidebar-card">
+                    <span class="profile-section center-block">
+                        <img id="prof-pic" class="card-img-top mx-auto d-block" src="assets/images/field-france-mont-st-michel.jpg">
+                        <div class="card-header">
+                            <h3>Field Palmer</h3>
+                            <p>Raleigh, NC <br> Full-Stack Developer</p>
                         </div>
-                        <h2>Field Palmer</h2>
-                        <span>
-                            <ul>
-                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </span>
-                    </div>
-                </div>
-                <div class="widgets">
-                    <!-- weather widget -->
-                    <span id="weather-widget">
-                        <a class="weatherwidget-io" href="https://forecast7.com/en/35d82n78d58/27604/?unit=us" data-label_1="RALEIGH" data-label_2="WEATHER" data-font="Noto Sans" data-icons="Climacons Animated" data-mode="Forecast" data-days="3" data-theme="blue-mountains" data-suncolor="#ffb000" >RALEIGH WEATHER</a>
-                        <script>
-                            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-                        </script>                    
                     </span>
-                    <!-- stock ticker widget -->
-                    <!-- TradingView Widget BEGIN -->
-                    <div class="tradingview-widget-container">
+                    <div class="card-body" id="sidebar-widgets">
+                        <!-- weather widget -->
+                        <span id="weather-widget">
+                            <a class="weatherwidget-io" href="https://forecast7.com/en/35d82n78d58/27604/?unit=us" data-label_1="RALEIGH" data-label_2="WEATHER" data-font="Noto Sans" data-icons="Climacons Animated" data-mode="Forecast" data-days="3" data-theme="blue-mountains" data-suncolor="#ffb000" >RALEIGH WEATHER</a>
+                            <script>
+                                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+                            </script>                    
+                        </span>
+                        <!-- TradingView Widget BEGIN -->
+                        <span class="tradingview-widget-container">
                             <div class="tradingview-widget-container__widget"></div>
                             <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
                             {
@@ -70,44 +61,65 @@
                                 "proName": "FX:EURUSD"
                             }
                             ],
-                            "locale": "en"
-                        }
+                                "locale": "en"
+                            }
                             </script>
-                        </div>
+                        </span>
                         <!-- TradingView Widget END -->
-                    <!-- spotify widget -->
-                    <span id="playlist">
-                        <iframe src="https://open.spotify.com/embed/user/129959859/playlist/5a9f0DcCIw46aDzciW2Owj" width="100%" height="400" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>                
-                    </span>
+                        <!-- spotify widget -->
+                        <span id="playlist">
+                            <iframe src="https://open.spotify.com/embed/user/129959859/playlist/5a9f0DcCIw46aDzciW2Owj" width="100%" height="400" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>                
+                        </span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="contact-icons">
+                            <ul class="social-links">
+                                <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </span>
+                    </div>
                 </div>
             </div>
             <!-- main body content -->
-            <div class="col-sm-9 body-content">
-                <!-- background-image starts here -->
-                <div class="container-fluid">
-                    <!-- home page top nav -->
-                    <nav id="landing-nav">
-                        <ul class="nav" id="top-nav">
-                            <li class="nav-item"><a class="nav-link" id="about-link" href="#">About</a></li>
-                            <li class="nav-item"><a class="nav-link" id="portfolio-link" href="#">Portfolio</a></li>
-                            <li class="nav-item"><a class="nav-link" id="contact-link" href="#">Contact</a></li>
-                        </ul>
-                    </nav>
-                    <!-- empty widgets for content loading -->
-                    <div class="content-input">
-                        <span id="home-page"></span>
-                        <span id="sidebar-widget"></span>
-                        <span id="about-page"></span>
-                        <span id="portfolio-page"></span>
-                        <span id="contact-page"></span>
-                        <span id="shop-page"></span>        
+            <div class="col-sm-9 body-content"> <!-- background-image starts here -->
+                <!-- home page top nav -->
+                <nav class="navbar d-flex sticky-top navbar-expand-lg navbar-light">
+                    <a class="navbar-brand d-flex flex-row" href="#">
+                        <span class="fa fa-bars"></span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse d-flex flex-row-reverse">
+                        <div class="navbar-nav" id="navbarNavAltMarkup">
+                            <a class="nav-item nav-link active" href="#">Home</a>
+                            <a class="nav-item nav-link" href="#">Portfolio</a>
+                            <a class="nav-item nav-link about-btn" href="#">About</a>
+                        </div>
                     </div>
+                </nav>
+                <!-- empty widgets for content loading -->
+                <div class="container content-input">
+                    <span id="home-page"></span>
+                    <span id="about-page"></span>
+                    <span id="portfolio-page"></span>
+                    <span id="contact-page"></span>
+                    <span id="shop-page"></span>
+                    <div id="pic-view"></div>        
                 </div>
             </div>
         </div>
     </div>
     <!-- jQuery -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <!-- bootstrap js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- my js -->
     <script src="assets/main.js"></script>
 </body>
 </html>

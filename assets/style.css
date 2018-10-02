@@ -89,9 +89,10 @@
 
     #prof-pic {
         border-radius: 50%;
-        width: 150px;
-        height: 150px;
+        width: 180px;
+        height: 180px;
         padding: 10px;
+        padding-top: 0;
     }
 
     #sidebar-widgets {

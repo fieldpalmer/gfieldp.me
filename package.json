@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/fieldpalmer/gfieldp.me/issues"
   },
-  "homepage": "https://github.com/fieldpalmer/gfieldp.me#readme"
+  "homepage": "https://github.com/fieldpalmer/gfieldp.me#readme",
+  "dependencies": {
+    "serve": "^10.0.2"
+  }
 }

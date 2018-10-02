@@ -1,6 +1,6 @@
-const loadHome = () => {$("#home-page").load("../templates/home-info-content.html");}
-const loadAbout = () => {$("#about-page").load("../templates/about-me.html");}
-const loadPortfolio = () => {$("#portfolio-page").load("../templates/portfolio.html");}
+const loadHome = () => {$("#home-page").load("../../templates/home-info-content.html");}
+const loadAbout = () => {$("#about-page").load("../../templates/about-me.html");}
+const loadPortfolio = () => {$("#portfolio-page").load("../../templates/portfolio.html");}
 // const loadContact = () => {$("#contact-page").load("../templates/contact.html");}
 // const loadStore = () => {$("#shop-page").load("../templates/shop.html");}
 

@@ -1,22 +1,30 @@
-const loadHome = () => {$("#home-page").load("../templates/home-info-content.html");}
-const loadAbout = () => {$("#about-page").load("../templates/about-me.html");}
-const loadPortfolio = () => {$("#portfolio-page").load("../templates/portfolio.html");}
+const loadHome = () => {
+    $("#home-page").load("./templates/homeInfoContent.html");
+}
+const loadAbout = () => {
+    $("#about-page").load("./templates/aboutMe.html");
+}
+const loadPortfolio = () => {
+    $("#portfolio-page").load("./templates/portfolio.html");
+}
 // const loadContact = () => {$("#contact-page").load("../templates/contact.html");}
 // const loadStore = () => {$("#shop-page").load("../templates/shop.html");}
 
 //initialize site
-$(document).ready(function(){
-    startSlider();
-    loadHome();
-    loadPortfolio();
-    loadAbout();
-});
+$(".content-input").html(loadHome);
 
 //home page content action
+    //top-nav-menu
+    $("#top-nav-home-link").on("click", function() {
+        $(".content-input").html(loadHome);
+    });
 
-$("#top-nav-home-link").on("click", loadHome);
-$("#top-nav-portfolio-link").on("click", loadPortfolio);
-$("#top-nav-about-link").on("click", loadAbout);
+    $("#top-nav-portfolio-link").on("click", function() {
+        $(".content-input").html(loadPortfolio);
+    });
+    $("#top-nav-about-link").on("click", function() {
+        $(".content-input").html(loadAbout);
+    });
 
     //background-slideshow
     let count = 0
@@ -33,7 +41,8 @@ $("#top-nav-about-link").on("click", loadAbout);
         }
     }
     function startSlider () { 
-        displayImage();
+        // displayImage();
         showImage = setInterval(nextImage, 1000 * 13) 
     }
+    startSlider();
     

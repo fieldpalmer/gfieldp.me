@@ -1,5 +1,10 @@
 /* main content styles */
 
+
+    .nav {
+        height: 100%;
+    }
+
     #top-menu {
         float: right;
         padding-right: 15px;

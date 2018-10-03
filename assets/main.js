@@ -29,18 +29,19 @@ $(".content-input").html(loadPortfolio);
 
     function displayImage() {
         $(".body-content").css("background-image", "url('" + images[count] + "')");
+        nextImage();
     }
     function nextImage() {
         // displayImage();
         count++;
-        setInterval(showImage, 1000 * 13);
+        setInterval(displayImage, 1000 * 13);
         if (count === images.length) {
             count = 0;
         }
     }
-    function startSlider () { 
-        displayImage();
-        showImage = setTimeout(nextImage, 1000) 
-    }
-    startSlider();
+    // function startSlider () { 
+    //     // showImage = setTimeout(nextImage, 1000) 
+    // }
+    displayImage();
+    // startSlider();
     

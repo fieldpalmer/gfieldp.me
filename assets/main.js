@@ -31,16 +31,16 @@ $(".content-input").html(loadPortfolio);
         $(".body-content").css("background-image", "url('" + images[count] + "')");
     }
     function nextImage() {
-        displayImage();
+        // displayImage();
         count++;
-        setTimeout(showImage, 1000);
+        setInterval(showImage, 1000 * 13);
         if (count === images.length) {
             count = 0;
         }
     }
     function startSlider () { 
         displayImage();
-        showImage = setInterval(nextImage, 1000 * 13) 
+        showImage = setTimeout(nextImage, 1000) 
     }
     startSlider();
     

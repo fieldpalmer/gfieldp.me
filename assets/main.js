@@ -30,8 +30,9 @@ $(".content-input").html(loadHome);
     let count = 0
     let showImage;
     let images = ["./assets/images/aspen-maroon-bells.JPG", "./assets/images/bangkok-aquarium-shark-head.jpg",  "./assets/images/delhi-jamid-mosque.JPG", "./assets/images/hampi-elephant-bath.jpg", "./assets/images/hampi-hanuman-boys.jpg", "./assets/images/kuala-lumpur-murugan.jpg", "./assets/images/morocco-rabat-beach-spot.jpeg", "./assets/images/napel-pokhara-canoes.jpg", "./assets/images/nepal-annapurna-village.jpg", "./assets/images/reading-bangkok-infinity-pool.jpg", "./assets/images/red-fort-delhi.jpg", "./assets/images/taj-mahal-agra.jpg", "./assets/images/varanasi-ganges-pier.jpg"]
+
     function displayImage() {
-        $(".body-content").css("background-image", "url('" + images[count] + "')");
+        $(".body-content").css("background", "url('" + images[count] + "')");
     }
     function nextImage() {
         count++;
@@ -41,7 +42,7 @@ $(".content-input").html(loadHome);
         }
     }
     function startSlider () { 
-        // displayImage();
+        displayImage();
         showImage = setInterval(nextImage, 1000 * 13) 
     }
     startSlider();

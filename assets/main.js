@@ -27,14 +27,15 @@ $(".content-input").html(loadPortfolio);
     let showImage;
     let images = ["assets/images/aspen-maroon-bells.JPG", "assets/images/bangkok-aquarium-shark-head.jpg",  "assets/images/delhi-jamid-mosque.JPG", "assets/images/hampi-elephant-bath.jpg", "assets/images/hampi-hanuman-boys.jpg", "assets/images/kuala-lumpur-murugan.JPG", "assets/images/morocco-rabat-beach-spot.jpeg", "assets/images/napel-pokhara-canoes.jpg", "assets/images/nepal-annapurna-village.JPG", "assets/images/reading-bangkok-infinity-pool.jpg", "assets/images/red-fort-delhi.JPG", "assets/images/taj-mahal-agra.JPG", "assets/images/varanasi-ganges-pier.JPG"]
 
-    function displayImage() {
-        $(".body-content").css("background-image", "url('" + images[count] + "')");
-        nextImage();
-    }
+    // function displayImage() {
+    //     nextImage();
+    // }
     function nextImage() {
         // displayImage();
+        setInterval(function displayImage () {
+            $(".body-content").css("background-image", "url('" + images[count] + "')");
+        }, 1000 * 13);
         count++;
-        setInterval(displayImage, 1000 * 13);
         if (count === images.length) {
             count = 0;
         }
@@ -42,6 +43,6 @@ $(".content-input").html(loadPortfolio);
     // function startSlider () { 
     //     // showImage = setTimeout(nextImage, 1000) 
     // }
-    displayImage();
+    nextImage();
     // startSlider();
     

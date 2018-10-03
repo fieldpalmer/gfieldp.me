@@ -32,8 +32,9 @@ $(".content-input").html(loadPortfolio);
         $(".body-content").css("background-image", "url('" + images[count] + "')");
     }
     function nextImage() {
+        displayImage();
         count++;
-        setTimeout(displayImage, 1000);
+        setTimeout(showImage, 1000);
         if (count === images.length) {
             count = 0;
         }

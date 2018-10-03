@@ -39,7 +39,7 @@ $(".content-input").html(loadPortfolio);
         }
     }
     function startSlider () { 
-        // displayImage();
+        displayImage();
         showImage = setInterval(nextImage, 1000 * 13) 
     }
     startSlider();

@@ -31,9 +31,9 @@
 
     .body-content {
         z-index: -5;
-        background-image: url('./images/footer_lodyas.png');
+        /* background-image: url('./images/footer_lodyas.png'); */
         background-size: cover;
-        background-position: right;
+        background-position: center;
         background-attachment: fixed;
         background-repeat: no-repeat;
         height: 100%;
@@ -102,7 +102,7 @@
         height: 40%;
         overflow-y: scroll;
         padding: 0;
-
+        margin-bottom: -45px;
     }
 
     .ticker-container {

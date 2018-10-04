@@ -46,10 +46,11 @@
 
     #mainWindow {
         min-height: 100vh;
+        margin-bottom: 20%;
     }
 
     #pic-view {
-        height: 100vh;
+        height: 600px;
     }
 
     .jumbotron {

@@ -1,4 +1,8 @@
 /* main content styles */
+    body {
+        font-size: 18px;
+    }
+
     hr {
         background-color: #7fdbff;
     }
@@ -157,6 +161,10 @@
         height: 45px;
         background-color: white;;
 
+    }
+
+    .push {
+        height: 45px;
     }
 
     .social-links {

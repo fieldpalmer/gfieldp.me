@@ -35,7 +35,7 @@
 
     .body-content {
         z-index: -5;
-        /* background-image: url('./images/footer_lodyas.png'); */
+        background-image: url('./images/aspen-maroon-bells.JPG');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -106,7 +106,7 @@
         height: 40%;
         overflow-y: scroll;
         padding: 0;
-        margin-bottom: -45px;
+        margin-bottom: -200px;
     }
 
     .ticker-container {
@@ -164,7 +164,7 @@
     }
 
     .push {
-        height: 45px;
+        height: 200px;
     }
 
     .social-links {

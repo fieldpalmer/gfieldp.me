@@ -1,5 +1,7 @@
 /* main content styles */
-
+    hr {
+        background-color: #7fdbff;
+    }
 
     .nav {
         height: 100%;
@@ -15,16 +17,21 @@
         top: 13px;
     }
 
+    .navbar > a {
+        color: #7fdbff;
+    }
+    #top-menu > a {
+        color: #7fdbff;
+    }
+
     #sidebar-menu-bars {
         position: fixed;
         top: 20px;
     }
 
     .body-content {
-        /* position: fixed; */
-        /* width: 80%; */
         z-index: -5;
-        /* background-image: url('./images/footer_lodyas.png'); */
+        background-image: url('./images/footer_lodyas.png');
         background-size: cover;
         background-position: right;
         background-attachment: fixed;
@@ -34,40 +41,17 @@
     }
 
     .content-input {
-        /* position: relative; */
         max-height: 100%;
-        padding: 5% 0;
-        /* margin: 0 auto; */
     }
 
     #pic-view {
         height: 100vh;
     }
-/* 
-    body::-webkit-scrollbar {
-        width: 6px;
-        padding: 1px;
-    }
-    
-    body::-webkit-scrollbar-track-piece {
-        background-color: rgb(35, 33, 33);
-        padding: 1px;
-    }
-
-    body::-webkit-scrollbar-thumb {
-        background-color: #666666;
-        border-radius: 500px ;
-    }
-
-    body::-webkit-scrollbar-corner {
-        background-color: none;
-    } */
 
     .jumbotron {
-        background-color: #eeeeee;
+        color: white;
+        background: none;
     }
-
-
 
     /* end main content styles */
     
@@ -81,38 +65,44 @@
         max-height: 100vh;
         width: 100%;
         margin: 0 auto;
+        background-image: url("./images/triangles-1430105_640.png");
+        box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.564);
+        /* border: 5px solid #7fdbff; */
     }
 
     .profile-section {
         min-height: 300px;
         max-height: 40%;
+        background-image: url("./images/triangles-1430105_640.png");
+        background-position: center;
+        background-size: cover;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.619);
+        z-index: 50;
     }
     
     
     .profile-section .card-header {
         text-align: center;
+        background-color: white;
+        line-height: 13px;
     }
     
-    #prof-pic-div {
-        background-image: url("./images/triangles-1430105_640.png");
-        background-position: center;
-        background-size: cover;
-        z-index: 50;
-    }
-
     #prof-pic {
         border-radius: 50%;
+        margin-top: 5px;
+        margin-bottom: -5px;
         width: 180px;
         height: 180px;
-        padding: 15px;
+        padding: 13px;
         z-index: 100;
+        background-color: white;
     }
 
     #sidebar-widgets {
         height: 40%;
         overflow-y: scroll;
-        margin-top: -40px;
         padding: 0;
+
     }
 
     .ticker-container {
@@ -162,9 +152,11 @@
 
     /* sidebar footer */
     #sidebar-card .card-footer {
-        padding: 5px;
+        padding: 3px;
         width: 100%;
         height: 35px;
+        background-color: white;;
+
     }
 
     .social-links {
@@ -174,15 +166,27 @@
     .social-links li {
         display: inline-block;
         padding-right: 10px;
+        color: #1034a6;
+        height: 25px;
+        width: 25px;
     }
 
     .social-links li:hover a {
-        color:red;
+        color: #f012be;
         transform:rotateY(360deg);
     }
 /* end sidebar styles */
 
 /* portfolio styles */
+
+#portfolio-section > .card-deck > .card {
+    background-color: #2a31328e;
+    border-radius: 0px;
+}
+
+.portfolio-card-img {
+    border-radius: 0;
+}
 
 /* end portfolio styles */
 

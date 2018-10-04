@@ -7,14 +7,9 @@ const loadAbout = () => {
 const loadPortfolio = () => {
     $(".content-input").load("./templates/portfolio.html");
 }
-// const loadContact = () => {$("#contact-page").load("../templates/contact.html");}
-// const loadStore = () => {$("#shop-page").load("../templates/shop.html");}
 
 //initialize site
 $(".content-input").html(loadPortfolio);
-// $(".content-input").append(loadAbout);
-// $(".content-input").append(loadPortfolio);
-// .append(loadAbout() + loadPortfolio());
 
 //home page content action
     //top-nav-menu
@@ -27,10 +22,11 @@ $(".content-input").html(loadPortfolio);
     let showImage;
     let images = ["assets/images/aspen-maroon-bells.JPG", "assets/images/bangkok-aquarium-shark-head.jpg",  "assets/images/delhi-jamid-mosque.JPG", "assets/images/hampi-elephant-bath.jpg", "assets/images/hampi-hanuman-boys.jpg", "assets/images/kuala-lumpur-murugan.JPG", "assets/images/morocco-rabat-beach-spot.jpeg", "assets/images/napel-pokhara-canoes.jpg", "assets/images/nepal-annapurna-village.JPG", "assets/images/reading-bangkok-infinity-pool.jpg", "assets/images/red-fort-delhi.JPG", "assets/images/taj-mahal-agra.JPG", "assets/images/varanasi-ganges-pier.JPG"]
 
-    function displayImage() {
+    const displayImage = () => {
         $(".body-content").css("background-image", "url('" + images[count] + "')");
     }
-    function nextImage() {
+
+    const nextImage = () => {
         // displayImage();
         count++;
         setTimeout(displayImage, 1000);
@@ -38,9 +34,11 @@ $(".content-input").html(loadPortfolio);
             count = 0;
         }
     }
-    function startSlider () { 
+
+    const startSlider = () => { 
         setInterval(nextImage, 1000 * 13) 
     }
-    displayImage();
-    startSlider();
+
+    // displayImage();
+    // startSlider();
     

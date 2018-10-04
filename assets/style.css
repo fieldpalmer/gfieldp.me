@@ -40,12 +40,12 @@
         transition: background 2.7s ease-in;
     }
 
-    .content-input {
-        max-height: 100%;
+    #mainWindow {
+        min-height: 100vh;
     }
 
     #pic-view {
-        height: 100vh;
+        height: 600px;
     }
 
     .jumbotron {

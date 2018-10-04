@@ -107,7 +107,7 @@
         height: 40%;
         overflow-y: scroll;
         padding: 0;
-        margin-bottom: -200px;
+        margin-bottom: -500px;
     }
 
     .ticker-container {
@@ -165,7 +165,7 @@
     }
 
     .push {
-        height: 200px;
+        height: 500px;
     }
 
     .social-links {

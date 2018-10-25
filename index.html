@@ -11,94 +11,145 @@
     <title>gfieldp</title>
 </head>
 <body>
-    <div class="container-fluid" id="landing-page">
 
-        <div class="row">
-
-            <div class="col-sm-3 p-0" id="sidebar">
-                <div class="card sticky-top" id="sidebar-card">
-                    <span class="profile-section center-block">
-                        <div id="prof-pic-div">
-                            <img id="prof-pic" class="card-img-top mx-auto d-block" src="assets/images/bitmoji-prof-pic.JPG">
-                        </div>
-                        <div class="card-header mx-2">
-                            <h4 class="mt-2">Field Palmer</h4>
-                            <p>Developer | Entrepreneur</p>
-                        </div>
-                    </span>
-                    <div class="card-body" id="sidebar-widgets">
-                        <!-- weather widget -->
-                        <span id="weather-widget">
-                            <a class="weatherwidget-io" href="https://forecast7.com/en/35d82n78d58/27604/?unit=us" data-label_1="RALEIGH" data-label_2="WEATHER" data-font="Noto Sans" data-icons="Climacons Animated" data-mode="Forecast" data-days="3" data-theme="blue-mountains" data-suncolor="#ffb000" >RALEIGH WEATHER</a>
-                            <script>
-                                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-                            </script>                    
-                        </span>
-                        <!-- TradingView Widget BEGIN -->
-                            <div class="ticker-canvas">
-                                <div class="tradingview-widget-container">
-                                    <div class="tradingview-widget-container__widget"></div>
-                                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
-                                    {"symbols":[
-                                        {"title": "BTC/USD", "proName": "BITFINEX:BTCUSD"},
-                                        {"title": "ETH/USD","proName": "BITFINEX:ETHUSD"},
-                                        {"description": "Gold (g)","proName": "FX_IDC:XAUUSDG"},
-                                        {"description": "Silver (g)", "proName": "FX_IDC:XAGUSDG"},
-                                        {"description": "Dow Jones ","proName": "DJ:DJI"},
-                                        {"description": "EUR/USD","proName": "FX:EURUSD"}
-                                        ],
-                                    "locale": "en"
-                                    }
-                                    </script>
-                                </div>
-                            </div>
-                        <!-- TradingView Widget END -->
-                        <!-- spotify widget -->
-                        <span id="playlist">
-                            <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZEVXcMRioPpxY4LR" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>                        
-                        </span>
+    <div class="main-wrap">
+        <!-- <div class="btn btn-lg" id="sidebar-btn"> -->
+            <input id="slide-sidebar" type="checkbox" role="button" />
+            <label id="sb-label" for="slide-sidebar"><span class="text-white fa fa-2x fa-bars p-3"></span></label>
+        <!-- </div> -->
+        
+        <div class="sidebar">
+            <!-- sidebar -->
+            <div class="card p-0 m-0" id="sidebar" >
+                <div class="card-header">
+                    <h1>Blast Off</h1>
+                </div>
+                <!-- widget section -->
+                <div class="card-body p-0 m-0" id="widgetDiv">
+                    <!-- weather widget -->
+                    <div id="weather-widget">
+                    <a class="weatherwidget-io" href="https://forecast7.com/en/35d82n78d58/27604/?unit=us" data-label_1="RALEIGH" data-label_2="WEATHER" data-font="Noto Sans" data-icons="Climacons Animated" data-mode="Forecast" data-days="3" data-theme="blue-mountains" data-suncolor="#ffb000" >RALEIGH WEATHER</a>
+                    <script>
+                        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+                    </script>                    
                     </div>
-                    <div class="push"></div>
-                    <div class="card-footer sticky-bottom">
-                        <span class="contact-icons">
-                            <ul class="social-links">
-                                <li class="mx-2"><a href="#"><i class="fa fa-2x fa-envelope" aria-hidden="true"></i></a></li>
-                                <li class="mx-2"><a href="#"><i class="fa fa-2x fa-github" aria-hidden="true"></i></a></li>
-                                <li class="mx-2"><a href="#"><i class="fa fa-2x fa-twitter" aria-hidden="true"></i></a></li>
-                                <li class="mx-2"><a href="#"><i class="fa fa-2x fa-linkedin" aria-hidden="true"></i></a></li>
-                                <li class="mx-2"><a href="#"><i class="fa fa-2x fa-instagram" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </span>
+                    <!-- TradingView Widget -->
+                    <div class="tradingview-widget-container mb-0">
+                        <div id="tv-medium-widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                        <script type="text/javascript">
+                        new TradingView.MediumWidget(
+                        {
+                            "container_id": "tv-medium-widget",
+                            "symbols": [
+                            [
+                                "BTC",
+                                "COINBASE:BTCUSD|1d"
+                            ],
+                            [
+                                "ETH",
+                                "COINBASE:ETHUSD|1d"
+                            ],
+                            [
+                                "LTC",
+                                "COINBASE:LTCUSD|1d"
+                            ],
+                            [
+                                "XLM",
+                                "KRAKEN:XLMUSD|1d"
+                            ],
+                            [
+                                "ZEC",
+                                "KRAKEN:ZECUSD|1d"
+                            ],
+                            [
+                                "NEO",
+                                "BINANCE:NEOUSD|1d"
+                            ],
+                            [
+                                "ZRX",
+                                "COINBASE:ZRXUSD|1d"
+                            ],
+                            [
+                                "XRP",
+                                "KRAKEN:XRPUSD|1d"
+                            ],
+                            [
+                                "XMR",
+                                "KRAKEN:XMRUSD|1d"
+                            ]
+                            ],
+                            "greyText": "Quotes by",
+                            "gridLineColor": "#e9e9ea",
+                            "fontColor": "#83888D",
+                            "underLineColor": "#dbeffb",
+                            "trendLineColor": "#4bafe9",
+                            "width": "100%",
+                            "height": "270px",
+                            "locale": "en"
+                        }
+                        );
+                        </script>
+                    </div>
+                    <!-- spotify widget -->
+                    <div class="mt-0" id="playlist">
+                        <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZEVXcMRioPpxY4LR" width="100%" height="420px" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>                        
+                    </div>
+                    <!-- end widgets -->
+                </div>
+                <!-- sidebar card footer -->
+                <div id="sidebar-footer" class="card-footer fixed-bottom p-0 m-0">
+                    <div class="contact-icons mt-2 text-justify">
+                        <ul class="social-links d-inline-flex">
+                            
+                            <!-- <li class="mx-2"><img src="assets/images/bitmoji-prof-pic.jpg" alt="prof-pic" class="img-thumbnail img-responsive" id="bitmoji"></li> -->
+                            <li class="mx-2"><a href="mailto:gfieldpalmer@gmail.com"><i class="fa fa-2x text-white fa-envelope" aria-hidden="true"></i></a></li>
+                            <li class="mx-2"><a href="https://github.com/fieldpalmer"><i class="fa fa-2x text-white fa-github" aria-hidden="true"></i></a></li>
+                            <li class="mx-2"><a href="#"><i class="fa fa-2x text-white fa-twitter" aria-hidden="true"></i></a></li>
+                            <li class="mx-2"><a href="https://www.linkedin.com/in/fieldpalmer/"><i class="fa fa-2x text-white fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li class="mx-2"><a href="#"><i class="fa fa-2x text-white fa-instagram" aria-hidden="true"></i></a></li>
+                            <li class="mx-2"><a href="#"><i class="fa fa-2x text-white fa-facebook" aria-hidden="true"></i></a></li>
+                        </ul>
                     </div>
                 </div>
-            </div>
-
-            <!-- Navigation Fixed top -->
-            <nav class="navbar d-flex fixed-top navbar-expand-lg">
-                <a class="navbar-brand d-flex flex-row" href="#" id="sidebar-menu-bars">
-                    <span class="fa fa-bars"></span>
-                </a>
-                <div class="navbar-nav d-flex flex-row" id="top-menu">
-                    <a href="#" id="top-nav-home-link" class="btn nav-item nav-link active" >Home</a>
-                    <a href="#" id="top-nav-portfolio-link" class="btn nav-item nav-link" >Portfolio</a>
-                    <a href="#" id="top-nav-about-link" class="btn nav-item nav-link about-btn" >About</a>
-                </div>
-            </nav>  
-
-            <!-- main body content -->
-            <div class="col-sm-9 body-content p-5"> <!-- background-image starts here -->
-
-                <!-- empty widgets for content loading -->
-                <div class="container content-input" id="mainWindow">
-              
-                </div>
-                <div id="pic-view"></div>
+            <!-- end sidebar -->
             </div>
         </div>
+
+        <div class="main">
+                <!-- top half page content -->
+                <div class="row">
+                    <div class="col-12 top-half-input" id="spaceHeader">
+                        <!-- shooting stars canvas -->
+                        <canvas id="field"></canvas> 
+                        <!-- Navigation Fixed top -->
+                        <nav class="navbar mt-4 d-flex fixed-top navbar-expand-lg">
+                            <a href="#" id="top-nav-welcome" class="flex-fill mx-2 navbar-nav btn nav-item justify-content-start"><h2>Welcome</h2></a>
+                            <a href="#" id="top-nav-home-link" class="flex-fill navbar-nav btn nav-item justify-content-end nav-link active"><h4>Home</h4></a>
+                            <a href="#" id="top-nav-portfolio-link" class="flex-fill navbar-nav btn nav-item nav-link justify-content-end" ><h4>Portfolio</h4></a>
+                            <a href="#" id="top-nav-about-link" class="flex-fill navbar-nav btn nav-item nav-link about-btn justify-content-end"><h4> About</h4></a>
+                        </nav>
+                        <!-- page title display -->
+                        <div id="welcome-title" class="jumbotron p-4">
+                            <p class="display-3">gfieldp.me</p>
+                            <hr id="title-hr" class="my-1">
+                        </div>
+    
+                    </div>
+                </div>
+                <!-- bottom half page content  -->
+                <div class="row bg-white">
+                    <div class="col-12 bot-half-input p-5" id="mainWindow">
+                        <!-- empty div for content loading -->
+                    </div>
+                </div>
+        </div>
     </div>
+
     <!-- jQuery -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <!-- my js -->
     <script src="assets/main.js"></script>
+    
 </body>
 </html>

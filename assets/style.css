@@ -73,7 +73,7 @@ body{
 
 #newsCard
 {
-    max-height: auto;
+    max-height: 700px;;
 }
 
 #newsCard .card-body 
@@ -96,6 +96,13 @@ body{
     background: #262623;
 }
 
+#sidebar .card-header {
+    background-image: url("../assets/images/astronaut-1784245_1280.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 10vh;
+}
+
 #widgetDiv {
     overflow-y: scroll;
     padding: 0;
@@ -111,6 +118,10 @@ body{
     background: #262623;
 }
 
+#bitmoji {
+    height: 50px;
+}
+
 .sidebar {
     position: fixed;
     top: 0;
@@ -122,6 +133,7 @@ body{
     opacity: 0.9;
     border: 10px solid #262623;
     border-left: none;
+    border-top: none;
     /* display: none; */
 }
 

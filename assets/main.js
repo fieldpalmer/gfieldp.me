@@ -199,3 +199,21 @@ const whatsNews = () => {
         };
     })
 }
+
+//rotating Welcome words process
+
+let words = ["Welcome", "مرحبا", "Bienvenue", "欢迎光临", "Willkommen", "ברוך הבא", "Bienvenidos", "सवागत हैं", "Fáilte", "ようこそ", "Benvenuto", "پخير", "Salve", "Тавтай морилогтун", "स्वागतम्", "Witam", "خوش آمدی", "Bem-vindos", "Добро пожаловать!", "Dobrodošli", "Karibuni", "ยินดีต้อนรับ", "Hoş geldiniz", "Được tiếp đãi ân cần", "Namkelekile", "Welcome"];
+
+var i = 0;
+
+(function loop() {
+    $("#welcome-load").html(words[i]);
+    if (i === words.length) {
+        i = 0 ;
+        return i;
+    }
+    if (++i < words.length) {
+        setTimeout(loop, 3000);  // call myself in 3 seconds time if required
+    }
+    
+})();

@@ -1,0 +1,103 @@
+<!-- sidebar -->
+<div class="col-3 p-0 mt-0 d-flex flex-grow-1">
+    <div class="card p-0 m-0" id="sidebar" >
+        <!-- sidebar header -->
+        <div class="card-header m-0 p-0 d-flex flex-row" id="sidebar-header">
+            <a class="header-link" href="#" >
+                <span class="fa fa-2x text-white fa-bars p-3"></span>
+            </a>
+            <a class="header-link" href="#" >
+                <h1 class="text-white p-2"> Welcome </h1>
+            </a>
+        </div>
+        <!-- widget section -->
+        <div class="card-body p-0 m-0" id="widgetDiv">
+            <!-- weather widget -->
+            <div id="weather-widget">
+            <a class="weatherwidget-io" href="https://forecast7.com/en/35d82n78d58/27604/?unit=us" data-label_1="RALEIGH" data-label_2="WEATHER" data-font="Noto Sans" data-icons="Climacons Animated" data-mode="Forecast" data-days="3" data-theme="blue-mountains" data-suncolor="#ffb000" >RALEIGH WEATHER</a>
+            <script>
+                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+            </script>                    
+            </div>
+            <!-- TradingView Widget -->
+            <div class="tradingview-widget-container mb-0">
+            <div id="tv-medium-widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+            <script type="text/javascript">
+            new TradingView.MediumWidget(
+            {
+                "container_id": "tv-medium-widget",
+                "symbols": [
+                [
+                    "BTC",
+                    "COINBASE:BTCUSD|1y"
+                ],
+                [
+                    "ETH",
+                    "COINBASE:ETHUSD|1y"
+                ],
+                [
+                    "LTC",
+                    "COINBASE:LTCUSD|1y"
+                ],
+                [
+                    "XLM",
+                    "KRAKEN:XLMUSD|1y"
+                ],
+                [
+                    "ZEC",
+                    "KRAKEN:ZECUSD|1y"
+                ],
+                [
+                    "NEO",
+                    "BINANCE:NEOUSD|1y"
+                ],
+                [
+                    "ZRX",
+                    "COINBASE:ZRXUSD|1y"
+                ],
+                [
+                    "XRP",
+                    "KRAKEN:XRPUSD|1y"
+                ],
+                [
+                    "XMR",
+                    "KRAKEN:XMRUSD|1y"
+                ]
+                ],
+                "greyText": "Quotes by",
+                "gridLineColor": "#e9e9ea",
+                "fontColor": "#83888D",
+                "underLineColor": "#dbeffb",
+                "trendLineColor": "#4bafe9",
+                "width": "100%",
+                "height": "270px",
+                "locale": "en"
+            }
+            );
+            </script>
+            </div>
+            <!-- spotify widget -->
+            <div class="mt-0" id="playlist">
+                <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZEVXcMRioPpxY4LR" width="100%" height="500px" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>                        
+            </div>
+        </div>
+        <div id="sidebar-footer" class="card-footer sticky-bottom d-flex flex-row p-0 m-0">
+            <img src="assets/images/bitmoji-prof-pic.jpg" alt="prof-pic" class="img-thumbnail img-responsive" id="bitmoji">
+            <p class="my-2 lead" id="footer-tag">
+            <strong>Field <br>Palmer</strong>
+            </p>
+            <div class="contact-icons mt-2 text-justify">
+            <ul class="social-links d-inline-flex">
+                <li class="mx-2"><a href="mailto:gfieldpalmer@gmail.com"><i class="fa fa-2x text-white fa-envelope" aria-hidden="true"></i></a></li>
+                <li class="mx-2"><a href="https://github.com/fieldpalmer"><i class="fa fa-2x text-white fa-github" aria-hidden="true"></i></a></li>
+                <li class="mx-2"><a href="#"><i class="fa fa-2x text-white fa-twitter" aria-hidden="true"></i></a></li>
+                <li class="mx-2"><a href="https://www.linkedin.com/in/fieldpalmer/"><i class="fa fa-2x text-white fa-linkedin" aria-hidden="true"></i></a></li>
+                <li class="mx-2"><a href="#"><i class="fa fa-2x text-white fa-instagram" aria-hidden="true"></i></a></li>
+                <li class="mx-2"><a href="#"><i class="fa fa-2x text-white fa-facebook" aria-hidden="true"></i></a></li>
+            </ul>
+            </div>
+        </div>
+    </div>
+</div>    
+    

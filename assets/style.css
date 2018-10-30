@@ -1,215 +1,175 @@
-/* main content styles */
-    body {
-        font-size: 18px;
-    }
-
-    hr {
-        background-color: #7fdbff;
-    }
-
-    .nav {
-        height: 100%;
-    }
-
-    #top-menu {
-        float: right;
-        padding-right: 15px;
-        list-style-type: none;
-        z-index:1000;
-        position: fixed;
-        right: 27px;
-        top: 13px;
-    }
-
-    .navbar > a {
-        color: #7fdbff;
-    }
-    #top-menu > a {
-        color: #7fdbff;
-    }
-
-    #sidebar-menu-bars {
-        position: fixed;
-        top: 20px;
-    }
-
-    .body-content {
-        z-index: -5;
-        background-image: url('./images/aspen-maroon-bells.JPG');
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        height: 100%;
-        transition: background 2.7s ease-in;
-    }
-
-    #mainWindow {
-        min-height: 100vh;
-        margin-bottom: 20%;
-    }
-
-    #pic-view {
-        height: 600px;
-    }
-
-    .jumbotron {
-        color: white;
-        background: none;
-    }
-
-    /* end main content styles */
-    
-    /* sidebar styles */
-    
-    #sidebar-widgets::-webkit-scrollbar {
-        display: none;
-    }
-
-    #sidebar-card {
-        max-height: 100vh;
-        width: 100%;
-        margin: 0 auto;
-        background-image: url("./images/triangles-1430105_640.png");
-        box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.564);
-        /* border: 5px solid #7fdbff; */
-    }
-
-    .profile-section {
-        min-height: 300px;
-        max-height: 40%;
-        background-image: url("./images/triangles-1430105_640.png");
-        background-position: center;
-        background-size: cover;
-        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.619);
-        z-index: 50;
-    }
-    
-    
-    .profile-section .card-header {
-        text-align: center;
-        background-color: white;
-        line-height: 13px;
-    }
-    
-    #prof-pic {
-        border-radius: 50%;
-        margin-top: 5px;
-        margin-bottom: -5px;
-        width: 180px;
-        height: 180px;
-        padding: 13px;
-        z-index: 100;
-        background-color: white;
-    }
-
-    #sidebar-widgets {
-        height: 40%;
-        overflow-y: scroll;
-        padding: 0;
-        /* margin-bottom: -500px; */
-    }
-
-    .ticker-container {
-        width: 100%;
-        overflow: hidden;
-    }
-        
-    .ticker-canvas {
-        width: calc((200px * 6) + 2px);
-        /* (min-width each item * number of items) + padding*/
-        -webkit-animation-iteration-count: infinite;
-        animation-iteration-count: infinite;
-        -webkit-animation-timing-function: linear;
-        animation-timing-function: linear;
-        -webkit-animation-name: ticker-canvas;
-        animation-name: ticker-canvas;
-        -webkit-animation-duration: 20s;
-        animation-duration: 20s;
-    }
-    .ticker-canvas:hover {
-        animation-play-state: paused
-    }
-    
-    @-webkit-keyframes ticker-canvas {
-        0% {
-            -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-            visibility: visible;
-        }
-        100% {
-            -webkit-transform: translate3d(-100%, 0, 0);
-            transform: translate3d(-100%, 0, 0);
-        }
-    }
-    
-    @keyframes ticker-canvas {
-        0% {
-            -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-            visibility: visible;
-        }
-        100% {
-            -webkit-transform: translate3d(-100%, 0, 0);
-            transform: translate3d(-100%, 0, 0);
-        }
-    }
-
-    /* sidebar footer */
-    #sidebar-card .card-footer {
-        padding: 3px;
-        width: 100%;
-        height: 45px;
-        background-color: white;;
-
-    }
-
-    /* .push {
-        height: 500px;
-    } */
-
-    .social-links {
-        text-align:center;
-    }
-
-    .social-links li {
-        display: inline-block;
-        padding-right: 10px;
-        color: #1034a6;
-        height: 25px;
-        width: 25px;
-    }
-
-    .social-links li:hover a {
-        color: #f012be;
-        transform:rotateY(360deg);
-    }
-/* end sidebar styles */
-
-/* portfolio styles */
-
-#portfolio-section > .card-deck > .card {
-    background-color: #2a31328e;
-    border-radius: 0px;
+/* general content styling */
+body{
+    overflow-x: hidden;
+}
+.top-half-input {
+    height: 55vh;
+    color: #FFFFFF;
+    /* background-color: #000; */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
-.portfolio-card-img {
-    border-radius: 0;
+.navbar {
+    padding-right: 15px;
+    list-style-type: none;
+    /* background-image: url(../assets/images/darkness.png); */
+    width: 100%;
+    max-height: 50px;
+    z-index: 13;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-/* end portfolio styles */
-
-/* about styles */
-
-
-    .bio-list-heading {
-        font-size: 12px;
+.navbar-nav, .jumbotron, #sidebar-header, .card-footer li, #footer-tag {
+    color: #fff;
+    text-shadow: 0px 0px 10px #f9e50f,
+                 0px 0px 20px #f9e50f;
+                 /* 0px 0px 30px #f9e50f; */
+                 /* 0px 0px 40px #f9e50f; */
 }
 
-/* end about styles */
+#welcome-title {
+    position: absolute;
+    top: 33%;
+    left: 10%;
+    margin: 0 auto;
+    z-index: 14;
+    background: none;
+}
+
+#title-hr {
+    border: 0; 
+    width: 75vw;
+    height: 1px; 
+    position: absolute;
+    bottom: 10%;
+    background-image: -webkit-linear-gradient(left, #f9e50f, #f9e50f45);
+    background-image: -moz-linear-gradient(left, #f9e50f, #f9e50f45);
+    background-image: -ms-linear-gradient(left, #f9e50f, #f9e50f45);
+    background-image: -o-linear-gradient(left, #f9e50f, #f9e50f45); 
+}
+
+#mainWindow {
+    min-height: 100vh;
+    margin-bottom: 20%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-left: 0;
+}
 
 
+/* HOME PAGE STYLES */
+#nasaCard {
+    max-height: auto;
+}
+
+#nasaCard .card-footer
+{
+    overflow-y: auto;    
+}
+
+#newsCard
+{
+    max-height: 700px;;
+}
+
+#newsCard .card-body 
+{
+    overflow-y: auto;    
+
+}
+
+.newsImage
+{
+    width: 100px;
+}
+
+/* SIDEBAR STYLES */
 
 
+#sidebar {
+    z-index:30;
+    /* height: 100; */
+    background: #262623;
+}
 
+#sidebar .card-header {
+    background-image: url("../assets/images/astronaut-1784245_1280.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 10vh;
+}
+
+#widgetDiv {
+    overflow-y: scroll;
+    padding: 0;
+}
+
+#widgetDiv::-webkit-scrollbar {
+    display: none;
+}
+
+#sidebar-footer {
+    position: fixed;
+    bottom: 0;
+    background: #262623;
+}
+
+#bitmoji {
+    height: 50px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: #262623;
+    /* height: 100%; */
+    width: 23%;
+    opacity: 0.9;
+    border: 10px solid #262623;
+    border-left: none;
+    border-top: none;
+    /* display: none; */
+}
+
+.main {
+    position: absolute;
+    top: 0;
+    left: 23%;
+    right: 0;
+    bottom: 0;
+    
+    -moz-transition: left 0.5s ease;
+    transition: left 0.5s ease;
+}
+
+input[type=checkbox] {
+   display: none;
+}
+
+input:checked ~ .main { 
+    left: 0;
+}
+
+input:checked ~ label {
+    left: 0;
+}
+
+label {
+    background: #262623;
+    z-index: 2;
+    position: fixed;
+    top: 13vh;
+    left: calc(23% - 15px);
+    margin-left: none;
+    -moz-transition: left 0.5s ease;
+    transition: left 0.5s ease;
+}
+    
+/* Portfolio Styles */
 
